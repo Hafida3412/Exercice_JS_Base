@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html>
+
 <head>
+
 <style>
+
+/*On définit des styles CSS pour cet élément "carre"*/
 .carre {
   width: 200px;
   height: 200px;
@@ -15,14 +19,21 @@
   font-size: 40px;
 }
 </style>
+
 </head>
+
 <body>
+<!--   On crée un élément div avec la classe "carre" dans le "body" du document HTML-->
 <div class="carre" onclick="afficherInfos()">Carré</div>
 
 <script>
+
+//On crée une fonction JavaScript nommée "afficherInfos":
 function afficherInfos() {
-  var carre = document.querySelector('.carre');
+  var carre = document.querySelector('.carre');//Dans cette fonction, on sélectionne l'élément div 
+  //avec la classe "carre" à l'aide de document.querySelector('.carre').
   
+  //On récupère différentes propriétés de style de cet élément div:
   var classeCSS = carre.className;
   var couleurTexte = carre.style.color= "rgb(255, 255, 255)";
   var couleurFond = carre.style.backgroundColor= "rgb(136,174, 136)";
@@ -32,8 +43,15 @@ function afficherInfos() {
   var policeTexte = carre.style.fontFamily = "Times New Roman";
   var tailleTexte = carre.style.fontSize= "40px";
 
-  alert("Classe CSS : " + classeCSS + "\nCouleur du texte : " + couleurTexte + "\nCouleur de fond : " + couleurFond + "\nHauteur : " + hauteur + "\nLargeur : " + largeur + "\nNom de la classe : " + nomClasse + "\nPolice du texte : " + policeTexte + "\nTaille du texte : " + tailleTexte);
+  //Enfin, on affiche toutes ces propriétés dans une boîte de dialogue d'alerte avec des sauts de 
+  //ligne pour une meilleure lisibilité:
+  alert("Classe : " + classeCSS + "\nCouleur du texte : " + couleurTexte +
+  "\nCouleur de fond : " + couleurFond + "\nHauteur : " + hauteur + "\nLargeur : " 
+  + largeur +  "\nPolice du texte : " + policeTexte + "\nTaille du texte : " + tailleTexte);
 }
+
 </script>
+
 </body>
+
 </html>
