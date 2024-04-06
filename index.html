@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<!--ON CREE UN ELEMENT CARRE-->
+
+<!--ON DEFINIT DES STYLES CSS A CE CARRE -->
+<style>
+.carre {
+  width: 200px;
+  height: 200px;
+  background-color: rgb(136, 174,136);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display:"Times New Roman" (40px);
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="carre" onclick="afficherInfos()">Carré</div>
+
+<script>
+
+//ON CREE UNE FONCTION "afficherInfos" QUI SERA DECLENCHEE LORSQUE L UTILISATEUR CLIQUERA DESSUS
+
+function afficherInfos() {
+  var carre = document.querySelector('.carre');//Dans cette fonction, on sélectionne l'élément 
+  //div avec la classe "carre" à l'aide de document.querySelector('.carre').
+  
+  //On récupère les propriétés de style du carré
+  var classeCSS = carre.className;
+  var couleurTexte = carre.style.color= "rgb(136, 174, 136)";
+  var couleurFond = carre.style.backgroundColor= "rgb(255, 255, 255)";
+  var hauteur = carre.style.height= "200px";
+  var largeur = carre.style.width= "200px";
+  var display = carre.style.display="flex";
+  var nomClasse = carre.className;
+  var policeTexte = carre.style.fontFamily="Times New Roman";
+  var tailleTexte = carre.style.fontSize="40px";
+  //Enfin, on affiche toutes ces propriétés dans une boîte de dialogue d'alerte avec des sauts 
+  //de ligne pour une meilleure lisibilité:
+
+  alert("Classe : " + classeCSS + "\nCouleur du texte : " + couleurTexte + "\nCouleur de fond : " 
+  + couleurFond + "\nHauteur : " + hauteur + "\nLargeur : " + largeur +  "\nNom de la classe : " 
+  + nomClasse + "\nPolice du texte : " + policeTexte + "\nTaille du texte : " + tailleTexte);
+}
+
+</script>
+
+</body>
+</html>
