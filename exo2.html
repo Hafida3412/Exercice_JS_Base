@@ -18,7 +18,7 @@
         height: 200px;
         cursor: pointer;
     }
-/**************DEFINITION DES COULEURS DES CARRES***************/
+/**************DEFINITION DES COULEURS DES 4 CARRES***************/
     #square1 {
         background-color: blue;
     }
@@ -35,7 +35,7 @@
         background-color: yellow;
     }
 
-/******CREATION DU 5EME CARRE: CCARRE D AFFICHAGE DE LA COULEUR ET DU TEXTE****/
+/******CREATION DU 5EME CARRE: CARRE D AFFICHAGE DE LA COULEUR ET DU TEXTE****/
     #colorSquare {
         width: 200px;
         height: 200px;
@@ -45,7 +45,7 @@
         margin-top:250px;
         }
 
-    #colorSquare p {       /****TEXTE*****/
+    #colorSquare p {       /****TEXTE DU CARRE*****/
        text-align: center;
        line-height: 200px;
        font-size: 20px;
@@ -60,16 +60,22 @@
 <body>
 
 <!--ON RECUPERE LES PROPRIETES DES CARRES-->
-<div class="container"> <!--Attribution des événements onclick aux carrés de couleur pour appeler 
-    la fonction changeColor avec la couleur correspondante.-->
+<div class="container"> 
+
+    <!--Attribution des événements onclick aux carrés de couleur 
+    pour appeler la fonction changeColor avec la couleur correspondante:-->
+
     <div id="square1" class="square" onclick="changeColor('blue')"></div>
     <div id="square2" class="square" onclick="changeColor('green')"></div>
     <div id="square3" class="square" onclick="changeColor('red')"></div>
     <div id="square4" class="square" onclick="changeColor('yellow')"></div>
-    <div id="colorSquare"><p id="colorText"></p></div>
-</div>
 
+    <div id="colorSquare"><p id="colorText"></p></div>
+
+</div>
+                                                                                                                                    ²&
 <script> 
+
 //Création d'une fonction JavaScript nommée "changeColor" qui prend en paramètre la couleur à appliquer.
 function changeColor(color) {
 //modification du fond du carré d'affichage de la couleur avec la couleur passée en paramètre 
