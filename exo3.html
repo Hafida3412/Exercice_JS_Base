@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Quatre carrés</title>
+
+<style>
+/***********CSS por styliser les carrés*********/
+    .square {
+        width: 200px;
+        height: 200px;
+        background-color: green;
+        margin: 10px;
+        display: inline-block;
+        transition: all 0.5s;
+    }
+</style>
+
+</head>
+
+<body>
+<!--Créattion des balises nécessaires pour afficher les carrés.--> 
+<div class="square" id="square1">1</div>
+<div class="square" id="square2">2</div><br>
+<div class="square" id="square3">3</div>
+<div class="square" id="square4">4</div>
+
+<script>
+/*cette fonction, vérifie si l'élément a déjà subi une rotation de 360 degrés. Si c'est le cas,
+réinitialise la rotation, la largeur et la hauteur de l'élément, et change la couleur de fond en vert.
+Sinon, effectue une rotation de 360 degrés, ajuste la taille de l'élément et change la couleur de fond 
+en rouge*/
+    const squares = document.getElementsByClassName('square');
+    for (let i = 0; i < squares.length; i++) {
+        squares[i].addEventListener('click', function() {
+            if (this.style.transform == 'rotate(360deg)') {
+                this.style.transform = 'rotate(0deg)';
+                this.style.width = '200px';
+                this.style.height = '200px';
+                this.style.backgroundColor = 'green';
+            } else {
+                this.style.transform = 'rotate(360deg)';
+                this.style.width = '180px';
+                this.style.height = '180px';
+                this.style.backgroundColor = 'red';
+            }
+        });
+    }
+ 
+</script>
+
+</body>
+
+</html>
