@@ -51,18 +51,30 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
     <body> 
         <div id="container"> 
             <h2>Follow us</h2> 
-            <div id="facebook" class="social-icon" onclick="toggleSocial(this)"><i class="fa-brands fa-facebook"></i></div>
-            <div id="twitter" class="social-icon" onclick="toggleSocial(this)"><i class="fa-brands fa-twitter"></i></div> 
-            <div id="instagram" class="social-icon" onclick="toggleSocial(this)"><i class="fa-brands fa-instagram"></i></div> 
+<!--La fonction toggleSocial(this) est une fonction JavaScript qui permet de basculer(=to toggle) l'affichage
+ou la visibilité d'un élément lorsqu'il est cliqué. En passant "this" en argument, la fonction fait référence
+à l'élément sur lequel l'utilisateur a effectué un clic, et change son état de visibilité. Cela permet
+généralement de montrer ou de cacher des éléments comme des boutons de partage sur les réseaux sociaux,
+des fenêtres contextuelles, etc.-->
+    <div id="facebook" class="social-icon" onclick="toggleSocial(this)"><i class="fa-brands fa-facebook"></i></div>
+    <div id="twitter" class="social-icon" onclick="toggleSocial(this)"><i class="fa-brands fa-twitter"></i></div> 
+    <div id="instagram" class="social-icon" onclick="toggleSocial(this)"><i class="fa-brands fa-instagram"></i></div> 
         </div> 
         <script> 
-        function toggleSocial(element) { 
-            var icons = document.querySelectorAll('.social-icon'); 
-            icons.forEach(icon => { 
+function toggleSocial(element) { 
+var icons = document.querySelectorAll('.social-icon'); //Sélection de tous les éléments avec la classe 'social-icon'
+//et les stocke dans la variable 'icons'.Ensuite, elle parcourt tous les éléments de 'icons' à l'aide de forEach.
+// Si l'élément en cours de traitement n'est pas égal à l'élément passé en paramètre, la classe 'active' est
+// retirée de cet élément:           
+icons.forEach(icon => { 
                 if (icon !== element) { 
                     icon.classList.remove('active'); 
             } 
             }); 
+//Ensuite, elle vérifie si l'élément passé en paramètre contient déjà la classe 'active'. Si c'est le cas,
+// la classe 'active' est retirée de cet élément et de l'élément avec l'ID 'container'.
+// Sinon, la classe 'active' est ajoutée à l'élément passé en paramètre ainsi qu'à l'élément avec 
+//l'ID 'container':
             if (element.classList.contains('active')) { 
                 element.classList.remove('active'); 
                 document.getElementById('container').classList.remove('active'); 
@@ -71,6 +83,8 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
                     document.getElementById('container').classList.add('active'); 
                     } 
                     } 
+//Cette fonction permet donc de basculer la classe 'active' sur les éléments 'social-icon' et sur 
+//l'élément passé en paramètre, en ajoutant ou en retirant la classe 'active' en fonction de son état actuel.
         </script> 
     </body> 
 </html>
