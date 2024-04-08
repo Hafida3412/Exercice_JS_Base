@@ -30,18 +30,18 @@
 
 //On crée une fonction JavaScript nommée "afficherInfos":
 function afficherInfos() {
-  var carre = document.querySelector('.carre');//Dans cette fonction, on sélectionne l'élément div 
+  let carre = document.querySelector('.carre');//Dans cette fonction, on sélectionne l'élément div 
   //avec la classe "carre" à l'aide de document.querySelector('.carre').
   
   //On récupère différentes propriétés de style de cet élément div:
-  var classeCSS = carre.className;
-  var couleurTexte = carre.style.color= "rgb(255, 255, 255)";
-  var couleurFond = carre.style.backgroundColor= "rgb(136,174, 136)";
-  var hauteur = carre.style.height = "200px";
-  var largeur = carre.style.width = "200px";
-  var nomClasse = carre.className;
-  var policeTexte = carre.style.fontFamily = "Times New Roman";
-  var tailleTexte = carre.style.fontSize= "40px";
+  const classeCSS = carre.className;
+  const couleurTexte = carre.style.color= "rgb(255, 255, 255)";
+  const couleurFond = carre.style.backgroundColor= "rgb(136,174, 136)";
+  const hauteur = carre.style.height = "200px";
+  const largeur = carre.style.width = "200px";
+  const nomClasse = carre.className;
+  const policeTexte = carre.style.fontFamily = "Times New Roman";
+  const tailleTexte = carre.style.fontSize= "40px";
 
   //Enfin, on affiche toutes ces propriétés dans une boîte de dialogue d'alerte avec des sauts de 
   //ligne pour une meilleure lisibilité:
