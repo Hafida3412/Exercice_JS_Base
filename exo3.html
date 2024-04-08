@@ -15,7 +15,7 @@
         background-color: green;
         margin: 10px;
         display: inline-block;
-        transition: all 0.5s;
+        transition: all 0.9s;
     }
 </style>
 
@@ -29,14 +29,15 @@
 <div class="square" id="square4">4</div>
 
 <script>
-/*cette fonction, vérifie si l'élément a déjà subi une rotation de 360 degrés. Si c'est le cas,
-réinitialise la rotation, la largeur et la hauteur de l'élément, et change la couleur de fond en vert.
-Sinon, effectue une rotation de 360 degrés, ajuste la taille de l'élément et change la couleur de fond 
-en rouge*/
+
+/*Cette boucle for parcourt les éléments de la liste squares en utilisant l'index i et associe un événement 
+click à chaque élément. Lorsque l'événement click est déclenché, la fonction anonyme associée vérifie 
+si l'élément a été déjà tourné à 360 degrés, et effectue les changements CSS en conséquence.*/
+
     const squares = document.getElementsByClassName('square');
     for (let i = 0; i < squares.length; i++) {
         squares[i].addEventListener('click', function() {
-            if (this.style.transform == 'rotate(360deg)') {
+            if (this.style.transform == 'rotate(360deg)') {  //"this" correspond à "square"
                 this.style.transform = 'rotate(0deg)';
                 this.style.width = '200px';
                 this.style.height = '200px';
@@ -49,7 +50,10 @@ en rouge*/
             }
         });
     }
- 
+ /*cette fonction, vérifie si l'élément a déjà subi une rotation de 360 degrés. Si c'est le cas,
+réinitialise la rotation, la largeur et la hauteur de l'élément, et change la couleur de fond en vert.
+Sinon, effectue une rotation de 360 degrés, ajuste la taille de l'élément et change la couleur de fond 
+en rouge*/
 </script>
 
 </body>
