@@ -72,8 +72,9 @@ var icons = document.querySelectorAll('.social-icon'); //Sélection de tous les 
 // retirée de cet élément:   
 
 icons.forEach(icon => { 
-                if (icon !== element) { 
-                    icon.classList.remove('active'); 
+                if (icon !== element) { //-->Si l'élément en cours de traitement n'est pas égal à l'élément passé en paramètre,
+                    icon.classList.remove('active'); //-->la classe 'active' est retirée de cet élément
+
             } 
             }); 
 
